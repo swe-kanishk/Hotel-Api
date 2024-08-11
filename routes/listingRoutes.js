@@ -11,7 +11,7 @@ router.route("/")
 .get(listingController.getListings)
 .post(isLoggedIn, upload.array("images"), listingController.createListing);
 
-router.get('/:listingID', listingController.findListings)
+router.get('/categories/:listingID', listingController.findListings)
 router.get('/details/:listingID', listingController.listingDetails)
 
 
